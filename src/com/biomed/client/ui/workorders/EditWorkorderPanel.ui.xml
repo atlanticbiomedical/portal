@@ -1,0 +1,97 @@
+<ui:UiBinder
+	xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'
+	xmlns:bio="urn:import:com.biomed.client.components"
+	xmlns:dp="urn:import:com.google.gwt.user.datepicker.client"
+	xmlns:cv="urn:import:com.google.gwt.user.cellview.client">
+
+	<g:HTMLPanel styleName="widget">
+		<div class="workorder">
+			<div class="head">
+				<div class="title">Workorder</div>
+				<div class="info">
+					<span class="workorderNumber">Workorder # <g:Label ui:field="workorderId" /></span>
+					<i><g:Label ui:field="workorderScheduledDate" /></i>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="contents">
+				<div class="company">
+					<h5><g:Label ui:field="clientName" /></h5>
+					<span><g:Label ui:field="clientAddress" /></span>
+					<span><g:Label ui:field="clientAddress2" /></span>
+					<span><g:Label ui:field="clientCity" />, <g:Label ui:field="clientState" />. <g:Label ui:field="clientZip" /></span>
+					<span>
+						Phone:
+						<strong class="red"><g:Label ui:field="clientPhone" /></strong>
+					</span>
+					<span>
+						Attn:
+						<strong><g:Label ui:field="clientPrimaryContact" /></strong>
+					</span>
+				</div>
+				<div class="schedule">
+					<h5>Schedule</h5>
+					<span>
+						Job scheduled date:
+						<dp:DateBox ui:field="workorderJobDateField"></dp:DateBox>
+					</span>
+					<span>
+						From:
+						<strong><g:Label ui:field="workorderStartTime" /></strong><b:ValueListBox ui:field="startTimePicker"></b:ValueListBox> to <strong><g:Label ui:field="workorderEndTime" /></strong><b:ValueListBox ui:field="endTimePicker"></b:ValueListBox>
+					</span>
+					<span>
+						Tech:
+						<strong><g:Label ui:field="workorderTechName" /></strong>
+						<b:ValueListBox ui:field="techPicker"></b:ValueListBox>
+					</span>
+				</div>
+				<div class="clear"></div>
+				<div class="job fluid">
+					<div class="formRow">
+						<div class="grid3">
+							<label>Reason for call:</label>
+						</div>
+						<div class="grid9">
+							<b:ValueListBox ui:field="workorderReasonField"></b:ValueListBox>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="formRow">
+						<div class="grid3">
+							<label>Job Status:</label>
+						</div>
+						<div class="grid9">
+							<b:ValueListBox ui:field="workorderStatusField"></b:ValueListBox>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="formRow">
+						<div class="grid3">
+							<label>Action Taken:</label>
+						</div>
+						<div class="grid9">
+							<b:TextArea ui:field="actionTakenField" visibleLines="4"></b:TextArea>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="formRow">
+						<div class="grid3">
+							<label>Remarks:</label>
+						</div>
+						<div class="grid9">
+							<b:TextArea ui:field="remarksField" visibleLines="4"></b:TextArea>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<b:Button ui:field="deleteButton" type="DANGER">Delete</b:Button>
+				<b:Button ui:field="saveButton" type="PRIMARY">Update</b:Button>
+			</div>
+		</div>
+
+	</g:HTMLPanel>
+</ui:UiBinder>

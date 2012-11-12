@@ -1,0 +1,9 @@
+war/WEB-INF/classes
+war/WEB-INF/build
+war/WEB-INF/deploy
+war/WEB-INF/lib/biomed.jar
+war/biomed
+war/*.log
+*.class
+biomed.war
+gwt-unitCache/

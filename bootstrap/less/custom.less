@@ -1,0 +1,736 @@
+html.thin {
+	#content {
+		margin-left: 85px;
+	}
+
+	#sidebar {
+		width: 85px;
+	}
+}
+
+html.wide {
+	#sidebar {
+		width: 311px;
+	}
+}
+
+.widget form {
+	padding: 20px 0 0 0;
+	margin: 0;
+	.form-actions {
+		margin-bottom: 0;
+	}
+
+	legend {
+		padding-left: 20px;
+	}
+}
+
+body {
+	background: url(/resources/images/backgrounds/body.jpg);
+}
+
+.loadingPanel {
+	position: absolute;
+	top: -5px;
+	z-index: 1200;
+	background-color: #F7F7F7;
+	width: 100px;
+	box-shadow: 0 2px 2px -2px #CCC;
+	border: 1px solid #CDCDCD;
+	border-radius: 3px;
+	left: 50%;
+	padding: 10px 20px 5px 20px;
+	margin-left: -50px;
+}
+
+.errorPanel {
+	position: fixed;
+	z-index: 1200;
+	background: #BA6D6D;
+	width: 100%;
+	padding: 5px 10px;
+	color: white;
+}
+
+#top {
+	position: fixed;
+	background: url(/resources/images/backgrounds/top.jpg);
+	height: 48px;
+	width: 100%;
+	border-bottom: 1px solid #1C1C1C;
+	z-index: 1000;
+	.wrapper {
+		margin: 0 30px;
+	}
+
+	.logo {
+		position: absolute;
+		background-image: url(/resources/images/logo.svg);
+		background-repeat: no-repeat;
+		background-size: 100px 100px;
+		background-position: 0 -25px;
+		height: 48px;
+		width: 300px;
+		padding-left: 5px;
+		opacity: 0.3;
+		float: left;
+	}
+
+	.logoText {
+		float: left;
+		font-size: 18px;
+		margin-top: 12px;
+		color: #CCC;
+	}
+
+	.topNav {
+		float: right;
+		position: relative;
+	}
+
+	.userNav {
+		float: left;
+		margin: 10px 0 0 0;
+		li {
+			display: inline-block;
+			margin: 0 0 0 10px;
+			background: #262626;
+			.border-radius (50%);
+			.box-shadow (0 1px 0 #4E4E4E);
+			a {
+				display: block;
+				height: 28px;
+				width: 28px;
+			}
+
+			a.search {
+				background: url(/resources/images/icons/usernav/search.png) no-repeat 9px 9px;
+			}
+
+			a.settings {
+				background: url(/resources/images/icons/usernav/settings.png) no-repeat 9px 9px;
+			}
+
+			a.logout {
+				background: url(/resources/images/icons/usernav/logout.png) no-repeat 9px 9px;
+			}
+		}
+	}
+}
+
+#sidebar {
+	position: fixed;
+	background: url(/resources/images/backgrounds/side.jpg);
+	background-position: -15px;
+	height: 100%;
+	width: 311px;
+	top: 49px;
+	border-right: 1px solid #C3C3C3;
+	.mainNav {
+		float: left;
+		list-style: none;
+		margin-left: 0;
+		padding-top: 0;
+		text-align: center;
+		border-bottom: 1px solid #555;
+		width: 85px;
+		li {
+			border-top: 1px solid #555;
+			border-bottom: 1px solid #2E2E2E;
+			a {
+				display: block;
+				padding: 14px 0 8px 0;
+				color: #BABABA;
+				font-size: 11px;
+				width: 85px;
+				#gradient > .vertical (rgba(86, 86, 86, 0.2) , rgba(54, 54, 54, 0.2));
+				&:hover {
+					color: #F4F4F4;
+					text-decoration: none;
+					.transition (all 0.3s ease-in-out);
+					img {
+						opacity: 1;
+						.transition (all 0.3s ease-in-out);
+					}
+				}
+
+				&:active , &.active {
+					color: #F4F4F4;
+					#gradient > .vertical (rgba(128, 128, 128, 0.4) , rgba(115, 115, 115, 0.3));
+				}
+
+				span {
+					display: block;
+					padding-top: 4px;
+					text-shadow: 0 1px 0 #303030;
+				}
+			}
+
+			img {
+				opacity: 0.5;
+			}
+		}
+	}
+
+	.secNav {
+		padding-left: 85px;
+	}
+
+	.gwt-DatePicker {
+		margin: 20px auto;
+	}
+}
+
+.sub-nav {
+	border-top: 1px solid #C3C3C3;
+	margin: 10px 0 0 0;
+	padding: 0;
+	list-style: none;
+	a {
+		color: #6A6A6A;
+		padding: 4px 14px 8px 10px;
+		display: block;
+		border-top: 1px solid #FDFDFD;
+		border-bottom: 1px solid #CECECE;
+		font-weight: bold;
+		font-size: 11px;
+		#gradient > .vertical (#f7f7f7 , #e6e6e6);
+		&:hover {
+			text-decoration: none;
+			#gradient > .vertical (#fbfbfb , #e8e8e8);
+		}
+
+		i {
+			position: relative;
+			margin-right: 0;
+			font-size: 12px;
+			top: 4px;
+		}
+	}
+
+	li.active {
+		border-left: 4px solid #505050;
+		a {
+			background: url(/resources/images/backgrounds/body.jpg);
+			margin-right: -1px;
+			color: #A64949;
+			padding-left: 6px;
+		}
+	}
+}
+
+.subNav {
+	list-style: none;
+	margin: 10px 0 20px 0;
+	border-top: 1px solid #c3c3c3;
+	li {
+		font-size: 11px;
+		position: relative;
+		a > img {
+			display: block;
+			float: left;
+			padding: 5px 10px 0 0;
+		}
+
+		a {
+			color: #6a6a6a;
+			padding: 8px 14px 8px 14px;
+			display: block;
+			border-top: 1px solid #fdfdfd;
+			border-bottom: 1px solid #cecece;
+			font-weight: bold;
+			#gradient > .vertical (#f7f7f7 , #e6e6e6);
+			&:hover {
+				#gradient > .vertical (#fbfbfb , #e8e8e8);
+			}
+
+			&:active {
+				background: #f0f0f0;
+			}
+		}
+	}
+}
+
+#content {
+	.wrapper {
+		margin: 0 30px;
+	}
+}
+
+.scheduler {
+	margin: 0 -30px;
+	position: fixed;
+	top: 49px;
+	bottom: 0;
+	img {
+		max-width: none ! important;
+	}
+}
+
+.frequency {
+	margin: 20px 0 0 0;
+	width: auto;
+
+	.name {
+		text-align: right;
+		background: white;
+	}
+
+	th {
+		background: white;
+	}
+
+	td {
+		text-align: center;
+	}
+
+	.icon::before {
+		font-family: FontAwesome;
+		font-weight: normal;
+		font-style: normal;
+		display: inline-block;
+		text-decoration: inherit;
+	}
+
+	.disabled {
+		width: 20px;
+		height: 20px;
+		background-color: #F9F9F9;
+		color: #CCC;
+		cursor: pointer;
+
+		.icon::before {
+			content: "\f00d";
+		}
+	}
+
+	.enabled {
+		width: 20px;
+		height: 20px;
+		background-color: #DFF0D8;
+		color: #468847;
+		cursor: pointer;
+
+		.icon::before {
+			content: "\f00c";
+		}
+	}
+
+	.controls {
+		text-align: right;
+		background: white;
+	}
+}
+
+.gwt-cal {
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	.major-time-interval {
+		border-top: 1px solid #D5D5D5;
+	}
+
+	.minor-time-interval {
+		border-top: 1px dotted #D5D5D5;
+	}
+
+	.working-hours {
+		background: #FFF;
+	}
+
+	.hour-label {
+		width: 50px;
+		border-top: 1px solid #DDD;
+		background: #FFF;
+	}
+
+	.hour-layout {
+		text-align: right;
+		padding: 0 4px;
+	}
+
+	.hour-text {
+		display: inline;
+		text-transform: lowercase;
+	}
+
+	.hour-noon-text {
+		display: inline;
+		text-transform: lowercase;
+	}
+
+	.ampm-text {
+		display: inline;
+		text-transform: lowercase;
+	}
+
+	.scroll-area {
+		height: 500px;
+		overflow: scroll;
+		overflow-x: hidden;
+	}
+
+	.gwt-calendar-header {
+		width: 100%;
+		border-top: 1px solid #D5D5D5;
+		border-bottom: 1px solid #D5D5D5;
+		table-layout: fixed;
+		border-collapse: collapse;
+		#gradient > .vertical (#F8F8F8 , #E8E8E8);
+		.year-cell {
+			width: 50px;
+			text-align: center;
+		}
+
+		.splitter {
+		}
+
+		.day-cell-container {
+			border-right: 1px solid #D5D5D5;
+		}
+
+		.day-cell , .day-cell-weekend {
+			position: absolute;
+			top: 0;
+			padding-top: 2px;
+			text-align: center;
+			border-left: 1px solid #D5D5D5;
+		}
+
+		.day-cell-today {
+			padding-top: 2px;
+			font-weight: bold;
+			text-align: center;
+			border-left: 1px solid #D5D5D5;
+		}
+	}
+
+	.multiDayBody {
+		width: 100%;
+		background: white;
+		table-layout: fixed;
+		.splitter {
+			height: 2px;
+			background: white;
+			border-top: 1px solid #D5D5D5;
+			border-bottom: 1px solid #D5D5D5;
+		}
+	}
+
+	.leftEmptyCell {
+		width: 50px;
+	}
+
+	.rightEmptyCell {
+		border-left: 1px solid #D5D5D5;
+	}
+
+	.day-separator {
+		position: absolute;
+		top: 0;
+		width: 3px;
+		height: 100%;
+		border-right: 1px solid #DDD;
+		border-left: 1px solid #DDD;
+	}
+}
+
+.gwt-cal .gwt-appointment-panel {
+	position: relative;
+	height: 1200px;
+}
+
+.gwt-cal .gwt-appointment-cell {
+	width: 99%;
+}
+
+.gwt-cal .dv-appointment {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #979797 ! important;
+	position: absolute;
+	font-size: 10px;
+	font-family: arial;
+	overflow: hidden;
+	filter: alpha(opacity=50);
+	opacity: .9;
+	-moz-opacity: .9;
+}
+
+.gwt-cal .dv-appointment-selected {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #979797 ! important;
+	position: absolute;
+	font-size: 10px;
+	font-family: arial;
+	overflow: hidden;
+	-webkit-box-shadow: 3px 3px 5px #B7B7B7;
+	-moz-box-shadow: 3px 3px 5px #B7B7B7;
+	opacity: 1;
+	-moz-opacity: 1;
+}
+
+.gwt-cal .dv-appointment-multiday {
+	border-style: solid;
+	border-width: 1px;
+	position: absolute;
+	font-size: 10px;
+	font-family: arial;
+	overflow: hidden;
+	filter: alpha(opacity=50);
+	opacity: .5;
+	-moz-opacity: .5;
+}
+
+.gwt-cal .dv-appointment-multiday-selected {
+	border-style: solid;
+	border-width: 1px;
+	position: absolute;
+	font-size: 10px;
+	font-family: arial;
+	overflow: hidden;
+	-webkit-box-shadow: 0 2px 2px -2px #CCC;
+	-moz-box-shadow: 0 2px 2px -2px #CCC;
+	opacity: 1;
+	-moz-opacity: 1;
+}
+
+.gwt-cal .dv-appointment .header , .gwt-cal .dv-appointment-selected .header {
+	white-space: initial;
+	color: #1D1D1D ! important;
+	padding: 1px;
+	padding-left: 8px;
+	font-weight: bold;
+	border-bottom: 1px solid black;
+}
+
+.gwt-cal .dv-appointment-multiday .header , .gwt-cal .dv-appointment-multiday-selected .header {
+	background: transparent;
+}
+
+.gwt-cal .dv-appointment .body , .gwt-cal .dv-appointment-selected .body , .gwt-cal .dv-appointment-multiday .body , .gwt-cal .dv-appointment-multiday-selected .body {
+	padding-left: 8px;
+	padding-top: 1px;
+	white-space: initial;
+	color: #1D1D1D ! important;
+}
+
+.gwt-cal .dv-appointment .footer , .gwt-cal .dv-appointment-selected .footer {
+	border-bottom: 3px double #FFF;
+	position: absolute;
+	bottom: 2px;
+	left: 48%;
+	height: 4px;
+	width: 8px;
+}
+
+.gwt-cal .dv-appointment-multiday .footer , .gwt-cal .dv-appointment-multiday-selected .footer {
+	display: none;
+}
+
+.gwt-cal-ListView {
+	overflow-y: scroll;
+	font-family: Verdana, Sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.gwt-cal-ListView .dateCell {
+	white-space: nowrap;
+	padding-right: 30px;
+	color: #112ABB;
+	color: #3366CC;
+	font-family: Verdana, Sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.gwt-cal-ListView .timeCell {
+	white-space: nowrap;
+	padding-left: 30px;
+	padding-right: 30px;
+	color: #3366CC;
+	font-family: Verdana, Sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.gwt-cal-ListView .titleCell {
+	width: 99%;
+	color: #3366CC;
+	font-family: Verdana, Sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.gwt-cal-ListView .row {
+	background: #E8EEF7;
+}
+
+.gwt-cal-ListView .row-alt {
+	background: #FFF;
+}
+
+.gwt-cal-ListView .row-today , .gwt-cal-ListView .row-alt-today {
+	background: #FFFFCC;
+}
+
+.gwt-cal-ListView .row-today .dateCell , .gwt-cal-ListView .row-alt-today .dateCell {
+	background: #BBCCDD;
+	border-color: #8899AA #DDEEFF #DDEEFF #8899AA;
+	border-style: solid;
+	border-width: 1px 1px 0 0;
+	color: #112ABB;
+}
+
+.gwt-cal-ListView .descriptionLabel {
+	color: #333333;
+	font-weight: normal;
+	font-size: 11px;
+}
+
+.gwt-cal-ListView .detailDecorator {
+	border-left: 2px solid #BBCCDC;
+	margin: 3px 0 5px 20px;
+	padding: 0 8px 4px 10px;
+}
+
+.gwt-cal-ListView .detailContainer {
+	font-weight: normal;
+	color: #333;
+}
+
+.gwt-cal-ListView .detailHeader {
+	font-weight: bold;
+}
+
+.gwt-cal-ListView .moreDetailsButton {
+	border-top: 1px solid #2952A3;
+	padding-top: 0.25em;
+	margin-top: 0.5em;
+	font-weight: normal;
+	font-color: #112ABB;
+	text-decoration: underline;
+}
+
+.gwt-cal-MonthView {
+	position: relative;
+	height: 523px;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;
+	overflow: hidden;
+}
+
+.gwt-cal-MonthView .grid {
+	table-layout: fixed;
+	background: #FFF;
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+}
+
+.gwt-cal-MonthView .canvas {
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	font-family: arial;
+	font-size: 12px;
+	background: transparent;
+}
+
+.gwt-cal-MonthView .dayCell , .gwt-cal-MonthView .dayCell-today {
+	border-left: 1px solid rgb(195, 217, 255);
+	border-bottom: 1px solid rgb(195, 217, 255);
+}
+
+.gwt-cal-MonthView .weekDayLabel , .gwt-cal-MonthView .weekDayLabel-today {
+	height: 20px;
+	text-align: center;
+	background-color: rgb(195, 217, 255);
+	font-size: 13px;
+	color: rgb(17, 42, 187);
+}
+
+.gwt-Cal-MonthView .dayCellLabel , .gwt-Cal-MonthView .dayCellLabel-today {
+	background-color: rgb(232, 238, 247);
+	display: block;
+	height: 15px;
+	font-family: arial;
+	font-size: 11px;
+	text-align: right;
+	padding-right: 5px;
+}
+
+.gwt-Cal-MonthView .dayCellLabel-today-disabled , .gwt-Cal-MonthView .dayCellLabel-disabled {
+	background-color: rgb(238, 238, 238);
+	display: block;
+	height: 15px;
+	font-family: arial;
+	font-size: 11px;
+	text-align: right;
+	padding-right: 5px;
+	color: #999;
+}
+
+.gwt-Cal-MonthView .dayCellLabel-today , .gwt-Cal-MonthView .dayCellLabel-today-disabled {
+	background-color: rgb(187, 204, 221);
+}
+
+.gwt-cal-MonthView .dayCell-today {
+	background-color: rgb(255, 255, 204);
+}
+
+.gwt-cal-MonthView .moreAppointments {
+	position: absolute;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.gwt-cal-MonthView .appointment {
+	position: absolute;
+	height: 20px;
+	overflow: hidden;
+	text-decoration: none;
+}
+
+.gwt-cal-MonthView .appointment-selected {
+	text-decoration: underline;
+	border: 0px;
+	overflow: hidden;
+}
+
+.gwt-cal-MonthView .appointment-multiday {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	position: absolute;
+	height: 20px;
+	color: #FFF;
+	overflow: hidden;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.gwt-cal-MonthView .appointment-multiday-selected {
+	position: absolute;
+	height: 20px;
+	overflow: hidden;
+	border-style: solid;
+	border-width: 1px;
+	-webkit-box-shadow: 3px 3px 5px #B7B7B7;
+	-moz-box-shadow: 3px 3px 5px #B7B7B7;
+	text-decoration: none;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	position: absolute;
+	height: 20px;
+	color: #FFF;
+	overflow: hidden;
+}
+

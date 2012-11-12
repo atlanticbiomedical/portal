@@ -1,0 +1,26 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:b2="urn:import:com.github.gwtbootstrap.datepicker.client.ui">
+
+	<g:HTMLPanel>
+		<div class="divider">
+			<span></span>
+		</div>
+		<div class="sideWidget">
+			<g:Anchor ui:field="addClient" styleName="sideB bBlue">Add Client</g:Anchor>
+		</div>
+		<div class="divider">
+			<span></span>
+		</div>
+		<div class="sideWidget">
+			<div class="formRow">
+				<b:ControlLabel>Search:</b:ControlLabel>
+				<b:TextBox ui:field="searchBox" placeholder="type to search..."></b:TextBox>
+			</div>
+		</div>
+		<div class="sideWidget">
+			<g:Anchor ui:field="search" styleName="sideB bBlue">Search</g:Anchor>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

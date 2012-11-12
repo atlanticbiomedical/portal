@@ -1,0 +1,37 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<g:HTMLPanel>
+		<ul ui:field="navigation" class="mainNav">
+			<li>
+				<g:Anchor ui:field="scheduleLink" title="">
+					<img src="resources/images/icons/mainnav/tables.png" alt="" />
+					<span>Schedule</span>
+				</g:Anchor>
+			</li>
+			<li>
+				<g:Anchor ui:field="workordersLink" title="">
+					<img src="resources/images/icons/mainnav/dashboard.png" alt="" />
+					<span>Workorders</span>
+				</g:Anchor>
+			</li>
+			<li>
+				<g:Anchor ui:field="clientsLink" title="">
+					<img src="resources/images/icons/mainnav/clients.png" alt="" />
+					<span>Clients</span>
+				</g:Anchor>
+			</li>
+			<li>
+				<g:Anchor ui:field="messagesLink" title="">
+					<img src="resources/images/icons/mainnav/messages.png" alt="" />
+					<span>Messages</span>
+				</g:Anchor>
+			</li>
+			<li>
+				<a href="http://atlanticbiomedical.com/ticket/" target="_blank">
+					<img src="resources/images/icons/mainnav/forms.png" alt="" />
+					<span>Tickets</span>
+				</a>
+			</li>
+		</ul>
+	</g:HTMLPanel>
+</ui:UiBinder>

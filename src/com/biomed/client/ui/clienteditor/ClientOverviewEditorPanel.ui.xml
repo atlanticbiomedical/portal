@@ -1,0 +1,126 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+
+	<g:HTMLPanel styleName="widget fluid">
+		<b:Form type="HORIZONTAL">
+			<b:Fieldset>
+				<b:ControlGroup>
+					<b:ControlLabel for="identifierField">Client Identifier:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox ui:field="identifierField" alternateSize="LARGE"
+							b:id="identifierField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="nameField">Client Name:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox ui:field="nameField" alternateSize="LARGE"
+							b:id="nameField" />
+					</b:Controls>
+				</b:ControlGroup>
+			</b:Fieldset>
+			<b:Fieldset>
+				<b:Legend>Primary Address</b:Legend>
+				<b:ControlGroup>
+					<b:ControlLabel for="primaryAddressField">Address:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox ui:field="primaryAddressField" alternateSize="LARGE"
+							b:id="primaryAddressField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="primaryAddress2Field">Address 2:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox ui:field="primaryAddress2Field"
+							alternateSize="LARGE" b:id="primaryAddress2Field" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="primaryCityField">City:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox ui:field="primaryCityField" alternateSize="LARGE"
+							b:id="primaryCityField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="primaryStateField">State:</b:ControlLabel>
+					<b:Controls>
+						<b:ValueListBox ui:field="primaryStateField"
+							alternateSize="LARGE" b:id="primaryStateField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="primaryZipField">Zip:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox ui:field="primaryZipField" alternateSize="LARGE"
+							b:id="primaryZipField" />
+					</b:Controls>
+				</b:ControlGroup>
+			</b:Fieldset>
+			<b:Fieldset>
+				<b:Legend>Primary Contact Information</b:Legend>
+				<b:ControlGroup>
+					<b:ControlLabel for="contactField">Contact:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox ui:field="primaryContactField" alternateSize="LARGE"
+							b:id="contactField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="phoneField">Phone:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox ui:field="primaryPhoneField" alternateSize="LARGE"
+							b:id="phoneField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="emailField">E-Mail:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox ui:field="primaryEmailField" alternateSize="LARGE"
+							b:id="emailField" />
+					</b:Controls>
+				</b:ControlGroup>
+			</b:Fieldset>
+			<b:Fieldset>
+				<b:Legend>Secondary Contact Information</b:Legend>
+				<b:ControlGroup>
+					<b:ControlLabel for="contactField">Contact:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox ui:field="secondaryContactField" alternateSize="LARGE"
+							b:id="contactField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="phoneField">Phone:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox ui:field="secondaryPhoneField" alternateSize="LARGE"
+							b:id="phoneField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="emailField">E-Mail:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox ui:field="secondaryEmailField" alternateSize="LARGE"
+							b:id="emailField" />
+					</b:Controls>
+				</b:ControlGroup>
+			</b:Fieldset>
+			<b:Fieldset>
+				<b:Legend>Notes</b:Legend>
+				<b:ControlGroup>
+					<b:ControlLabel for="notesField">Notes:</b:ControlLabel>
+					<b:Controls>
+						<b:TextArea ui:field="notesField" alternateSize="LARGE"
+							b:id="notesField" />
+					</b:Controls>
+				</b:ControlGroup>
+			</b:Fieldset>
+			<b:Fieldset>
+				<b:FormActions>
+					<b:Button ui:field="saveButton" type="PRIMARY">Save</b:Button>
+				</b:FormActions>
+			</b:Fieldset>
+
+		</b:Form>
+	</g:HTMLPanel>
+</ui:UiBinder>

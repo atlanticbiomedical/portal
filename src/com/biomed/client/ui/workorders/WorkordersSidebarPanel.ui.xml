@@ -1,0 +1,32 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:dp="urn:import:com.google.gwt.user.datepicker.client" xmlns:b2="urn:import:com.github.gwtbootstrap.datepicker.client.ui">
+
+	<g:HTMLPanel>
+		<div class="sideWidget">
+			<div class="formRow">
+				<label>Start Date:</label>
+				<dp:DateBox ui:field="startDateField"></dp:DateBox>
+			</div>
+			<div class="formRow">
+				<label>End Date:</label>
+				<dp:DateBox ui:field="endDateField"></dp:DateBox>
+			</div>
+			<div class="formRow">
+				<label>Client:</label>
+				<b:ValueListBox ui:field="clientField"></b:ValueListBox>
+			</div>
+			<div class="formRow">
+				<label>Workorder Status:</label>
+				<b:ValueListBox ui:field="workorderStatusField"></b:ValueListBox>
+			</div>
+			<div class="formRow">
+				<label>Technician:</label>
+				<b:ValueListBox ui:field="techField"></b:ValueListBox>
+			</div>
+			<div class="formRow">
+				<b:Button ui:field="searchButton" block="true" size="SMALL" type="INFO">Search</b:Button>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

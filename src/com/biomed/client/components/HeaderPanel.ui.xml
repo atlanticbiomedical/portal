@@ -1,0 +1,14 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+  <div id="top">
+    <div class="wrapper">
+      <div class="logo"></div>
+      <a href="#" title="" class="logoText">Atlantic Biomedical</a>
+
+      <div class="topNav">
+        <ul class="userNav">
+        </ul>
+      </div>
+    </div>
+  </div>
+</ui:UiBinder>

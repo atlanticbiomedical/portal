@@ -1,0 +1,71 @@
+<ui:UiBinder
+	xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:dp="urn:import:com.google.gwt.user.datepicker.client"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+
+	<g:HTMLPanel styleName="widget fluid">
+		<b:Form type="HORIZONTAL">
+			<b:Fieldset>
+				<b:ControlGroup>
+					<b:ControlLabel for="messageFor">Message For:</b:ControlLabel>
+					<b:Controls>
+						<b:ValueListBox b:id="messageFor" ui:field="messageForField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="name">Name:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" ui:field="nameField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="name">Company:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" ui:field="companyField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="phone">Phone:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" ui:field="phoneField" placeholder="(999) 999-9999" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="extension">Extension:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" ui:field="phoneExtensionField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="time">Time to return call:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" ui:field="timeToReturnCallField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="time"></b:ControlLabel>
+					<b:Controls controlsRow="true">
+						<b:CheckBox ui:field="telephonedField">Telephoned</b:CheckBox>
+						<b:CheckBox ui:field="cameToSeeYouField">Came to see you</b:CheckBox>
+						<b:CheckBox ui:field="wantsToSeeYouField">Wants to see you</b:CheckBox>
+						<b:CheckBox ui:field="returnedYourCallField">Returned your call</b:CheckBox>
+						<b:CheckBox ui:field="pleaseCallField">Please call</b:CheckBox>
+						<b:CheckBox ui:field="willCallAgainField">Will call again</b:CheckBox>
+						<b:CheckBox ui:field="rushField">Rush</b:CheckBox>
+						<b:CheckBox ui:field="specialAttentionField">Special Attention</b:CheckBox>
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="time">Notes:</b:ControlLabel>
+					<b:Controls>
+						<b:TextArea alternateSize="XXLARGE" ui:field="notesField" />
+					</b:Controls>
+				</b:ControlGroup>
+				<b:FormActions>
+					<b:Button ui:field="sendButton" type="PRIMARY">Send</b:Button>
+				</b:FormActions>
+			</b:Fieldset>
+		</b:Form>
+	</g:HTMLPanel>
+</ui:UiBinder>

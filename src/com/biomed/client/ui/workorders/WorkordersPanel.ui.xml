@@ -1,0 +1,11 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:bio="urn:import:com.biomed.client.components"
+	xmlns:cv="urn:import:com.google.gwt.user.cellview.client">
+
+	<g:HTMLPanel styleName="widget">
+		<div id="dyn2" class="shownpars">
+			<cv:CellTable ui:field="table" />
+			<bio:Pager ui:field="pager" />
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>
