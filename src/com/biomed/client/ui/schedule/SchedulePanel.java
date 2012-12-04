@@ -2,15 +2,20 @@ package com.biomed.client.ui.schedule;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
 import com.biomed.client.resources.BiomedAppointmentTheme;
+import com.biomed.client.ui.renderers.UserDTORenderer;
+import com.biomed.shared.api.dto.UserDTO;
 import com.bradrydzewski.gwt.calendar.client.Appointment;
 import com.bradrydzewski.gwt.calendar.client.Calendar;
 import com.bradrydzewski.gwt.calendar.client.CalendarSettings;
 import com.bradrydzewski.gwt.calendar.client.CalendarViews;
+import com.github.gwtbootstrap.client.ui.ValueListBox;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.event.logical.shared.ResizeEvent;
 import com.google.gwt.event.logical.shared.ResizeHandler;
@@ -20,6 +25,8 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.HasConstrainedValue;
+import com.google.gwt.user.datepicker.client.DateBox;
 import com.google.maps.gwt.client.Geocoder;
 import com.google.maps.gwt.client.Geocoder.Callback;
 import com.google.maps.gwt.client.GeocoderRequest;
@@ -44,6 +51,12 @@ public class SchedulePanel extends Composite implements Schedule.View {
   @UiField
   FlowPanel mapContainer;
 
+  @UiField
+  DateBox datePicker;
+  
+  @UiField(provided = true)
+  ValueListBox<UserDTO> techPicker;
+  
   private static final LatLng center = LatLng.create(39.257147, -76.685686);
 
   private Calendar calendar;
@@ -55,6 +68,7 @@ public class SchedulePanel extends Composite implements Schedule.View {
 
   @Inject
   public SchedulePanel(Binder binder) {
+  	techPicker = new ValueListBox<UserDTO>(new UserDTORenderer("All"));
     initWidget(binder.createAndBindUi(this));
 
     buildCalendar();
@@ -99,7 +113,7 @@ public class SchedulePanel extends Composite implements Schedule.View {
 
     calendar = new Calendar();
     calendar.setSettings(settings);
-    calendar.setView(CalendarViews.DAY);
+    calendar.setView(CalendarViews.TECH);
     calendar.setWidth("100%");
     calendar.setHeight("100%");
     calContainer.add(calendar);
@@ -115,8 +129,11 @@ public class SchedulePanel extends Composite implements Schedule.View {
     }
     markers.clear();
 
+    int columnId = -1;
+    Map<Integer, Integer> columnMap = Maps.newHashMap();
+    
     for (Workorder w : workorders) {
-      String address = null;
+    	String address = null;
       if (w.clientAddress != null) {
         address = w.clientAddress + "\n" + w.clientCity + ", " + w.clientState + ". " + w.clientZip;
       }
@@ -132,6 +149,14 @@ public class SchedulePanel extends Composite implements Schedule.View {
       apt.setStart(w.jobStart);
       apt.setEnd(w.jobEnd);
       apt.setTheme(BiomedAppointmentTheme.STYLES.get(w.color));
+      
+      if (columnMap.containsKey(w.techId)) {
+      	apt.setColumnId(columnMap.get(w.techId));
+      } else {
+      	columnId++;
+      	columnMap.put(w.techId, columnId);
+      	apt.setColumnId(columnId);
+      }
 
       calendar.addAppointment(apt);
       appointments.add(apt);
@@ -177,5 +202,9 @@ public class SchedulePanel extends Composite implements Schedule.View {
     Marker.create(options);
 
     geocoder = Geocoder.create();
+  }
+
+  public HasConstrainedValue<UserDTO> getTechField() {
+    return techPicker;
   }
 }

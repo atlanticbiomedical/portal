@@ -43,4 +43,7 @@
     <replace-with class="com.biomed.client.resources.BiomedDayViewStyleManager">
         <when-type-is class="com.bradrydzewski.gwt.calendar.client.dayview.DayViewStyleManager"/>
     </replace-with>
+    <replace-with class="com.biomed.client.resources.BiomedTechViewStyleManager">
+        <when-type-is class="com.bradrydzewski.gwt.calendar.client.techview.TechViewStyleManager"/>
+    </replace-with>
 </module>

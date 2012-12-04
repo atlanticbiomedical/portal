@@ -32,7 +32,8 @@ public class BiomedModule extends AbstractModule {
   private void bindProperties() {
     Properties prop = new Properties();
     try {
-      prop.load(new FileInputStream("/srv/biomed/server.properties"));
+    	System.out.println("Current Directory: " + System.getProperty("user.dir"));
+      prop.load(new FileInputStream("../server.properties"));
       Names.bindProperties(binder(), prop);
     } catch (IOException e) {
       e.printStackTrace();

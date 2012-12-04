@@ -2447,3 +2447,30 @@ table .dropdown-menu.pull-right { right: auto; left: 0; }
 	display: inline-block;
 	background: #FDFDFD;
 }
+
+
+.scheduler-head-bar {
+	border-bottom: 1px solid #C3C3C3;
+	box-shadow: 0 1px 0 #F6F6F6, 0 1px 0 white inset;
+	-webkit-box-shadow: 0 1px 0 #F6F6F6, 0 1px 0 white inset;
+	-moz-box-shadow: 0 1px 0 #f6f6f6, 0 1px 0 #fff inset;
+	background: url(../images/backgrounds/breadcrumbs.png) #F6F6F6 repeat-x;
+	background-position-y: bottom;
+	padding: 4px;
+}
+
+.scheduler-head-bar .item {
+	display: inline;
+}
+
+.scheduler-head-bar .item label {
+	font-weight: bold;
+	padding: 0 2px 0 10px;
+	display: inline;
+}
+
+.scheduler-head-bar .item input {
+	margin: 0;
+	padding: 0 6px;
+}
+
