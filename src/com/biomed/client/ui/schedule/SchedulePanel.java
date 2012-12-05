@@ -1,5 +1,7 @@
 package com.biomed.client.ui.schedule;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -123,6 +125,13 @@ public class SchedulePanel extends Composite implements Schedule.View {
     calendar.clearAppointments();
     appointments.clear();
     calendar.suspendLayout();
+
+    Collections.sort(workorders, new Comparator<Workorder>() {
+			@Override
+			public int compare(Workorder o1, Workorder o2) {
+				return o1.techName.compareTo(o2.techName);
+			}
+		});
 
     for (Marker m : markers) {
       m.setMap((GoogleMap) null);

@@ -186,9 +186,6 @@ public class DayViewHeader extends Composite implements HasWeekSelectionHandlers
         header.setText(0, 0, String.valueOf(year));
     }
 
-    public void setFuckingDayOfYear(Date date) {
-    }
-    
     private void addDayClickHandler(final Label dayLabel, final Date day) {
         dayLabel.addClickHandler(new ClickHandler() {
             public void onClick(ClickEvent event) {
