@@ -30,6 +30,7 @@ import com.google.common.collect.Maps;
 public class CalendarApi {
 	private static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
 	private static final JsonFactory JSON_FACTORY = new JacksonFactory();
+	private static final String API_ACCOUNT = "api@atlanticbiomedical.com";
 	private static final String CLIENT_ID = "333768673996-904fuljpb428q9r37m2uujislhal5kt9.apps.googleusercontent.com";
 	private static final String CLIENT_SECRET = "PAmHruqVbAXzEnnTwelx-Ll7";
 	private static final String REFRESH_TOKEN = "1/fWvZebnDAhY0MlgK1IImcrGIDm4ZlILiRM8_47HsUFc";
@@ -66,8 +67,8 @@ public class CalendarApi {
 
 		Calendar calendar = buildCalendar();
 		try {
-			Event resultEvent = calendar.events()
-					.insert("api@atlanticbiomedical.com", event).execute();
+			Event resultEvent = calendar.events().insert(API_ACCOUNT, event)
+					.execute();
 			return resultEvent.getId();
 		} catch (IOException e) {
 			throw new RuntimeException(e);
@@ -83,8 +84,7 @@ public class CalendarApi {
 		Calendar calendar = buildCalendar();
 
 		try {
-			Event event = calendar.events()
-					.get("api@atlanticbiomedical.com", eventId).execute();
+			Event event = calendar.events().get(API_ACCOUNT, eventId).execute();
 
 			EventAttendee attendee = new EventAttendee();
 			attendee.setEmail(email);
@@ -97,8 +97,7 @@ public class CalendarApi {
 			DateTime end = new DateTime(endDate, TimeZone.getTimeZone("UTC"));
 			event.setEnd(new EventDateTime().setDateTime(end));
 
-			calendar.events().update("api@atlanticbiomedical.com", eventId, event)
-					.execute();
+			calendar.events().update(API_ACCOUNT, eventId, event).execute();
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
@@ -112,7 +111,7 @@ public class CalendarApi {
 		Calendar calendar = buildCalendar();
 
 		try {
-			calendar.events().delete("api@atlanticbiomedical.com", eventId).execute();
+			calendar.events().delete(API_ACCOUNT, eventId).execute();
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}

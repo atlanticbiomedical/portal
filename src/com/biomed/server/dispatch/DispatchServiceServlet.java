@@ -9,9 +9,10 @@ import com.biomed.shared.dispatch.DispatchService;
 import com.biomed.shared.dispatch.DispatchResult;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
+@SuppressWarnings("serial")
 @Singleton
 public class DispatchServiceServlet extends RemoteServiceServlet implements DispatchService {
-  private final Dispatch dispatch;
+	private final Dispatch dispatch;
 
   @Inject
   public DispatchServiceServlet(Dispatch dispatch) {

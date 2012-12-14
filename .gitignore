@@ -7,3 +7,4 @@ war/*.log
 *.class
 biomed.war
 gwt-unitCache/
+.gwt/
